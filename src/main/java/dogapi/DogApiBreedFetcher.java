@@ -26,7 +26,7 @@ public class DogApiBreedFetcher implements BreedFetcher {
      *                                call fails for any reason)
      */
     @Override
-    public List<String> getSubBreeds(String breed) {
+    public List<String> getSubBreeds(String breed) throws BreedNotFoundException {
         String url = "https://dog.ceo/api/breed/" + breed + "/list";
         Request request = new Request.Builder()
                 .url(url)
